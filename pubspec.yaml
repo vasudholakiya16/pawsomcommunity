@@ -86,6 +86,9 @@ flutter:
     - assets/icons/categories.png
     - assets/icons/home.png
     - "assets/icons/img12.png"
+    - assets/images/cat_face_main_page.png
+    - assets/images/fish_main_page.png
+    - assets/images/chick_main_page.png
 
 
 

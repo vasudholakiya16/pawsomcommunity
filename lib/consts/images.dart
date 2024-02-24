@@ -62,3 +62,5 @@ const icWallet = "assets/icons/wallet.png";
 const icWhiteTick = "assets/icons/white_tick.png";
 const icWholeSale = "assets/icons/wholesale.png";
 const img12 = "assets/icons/img12.png";
+const img13 = "assets/images/fish_main_page.png";
+const img14 = "assets/images/chick_main_page.png";

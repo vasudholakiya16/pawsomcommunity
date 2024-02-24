@@ -89,6 +89,15 @@ class HomeScreen extends StatelessWidget {
               "Category".text.fontFamily('Mplus').black.size(18).make(),
             ],
           ),
+          // search_Bar(),
+          Row(
+            children: [
+              categoryScreen('assets/images/dog0.png', 'Dog'),
+              categoryScreen('assets/images/cat_face_main_page.png', 'Cat'),
+              categoryScreen('assets/images/fish_main_page.png', 'Fish'),
+              categoryScreen('assets/images/chick_main_page.png', 'Chick'),
+            ],
+          ),
         ],
       ),
     );
