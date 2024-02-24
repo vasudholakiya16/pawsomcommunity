@@ -92,12 +92,35 @@ class HomeScreen extends StatelessWidget {
           // search_Bar(),
           Row(
             children: [
-              categoryScreen('assets/images/dog0.png', 'Dog'),
-              categoryScreen('assets/images/cat_face_main_page.png', 'Cat'),
-              categoryScreen('assets/images/fish_main_page.png', 'Fish'),
-              categoryScreen('assets/images/chick_main_page.png', 'Chick'),
+              GestureDetector(
+                onTap: () {
+                  print('Dog category clicked');
+                },
+                child: categoryScreen('assets/images/dog0.png', 'Dog'),
+              ),
+              GestureDetector(
+                onTap: () {
+                  print('Cat category clicked');
+                },
+                child: categoryScreen(
+                    'assets/images/cat_face_main_page.png', 'Cat'),
+              ),
+              GestureDetector(
+                onTap: () {
+                  print('Fish category clicked');
+                },
+                child:
+                    categoryScreen('assets/images/fish_main_page.png', 'Fish'),
+              ),
+              GestureDetector(
+                onTap: () {
+                  print('Chick category clicked');
+                },
+                child: categoryScreen(
+                    'assets/images/chick_main_page.png', 'Chick'),
+              ),
             ],
-          ),
+          )
         ],
       ),
     );
