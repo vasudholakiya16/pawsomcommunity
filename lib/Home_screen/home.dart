@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
       const BottomNavigationBarItem(
         icon: SizedBox(
           child: Icon(
-            Icons.message,
+            Icons.message_rounded,
             size: 30.0,
           ),
         ),
