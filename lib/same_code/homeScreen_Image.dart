@@ -17,7 +17,7 @@ Widget search_Bar() {
       .box
       .color(Color.fromARGB(126, 223, 223, 223)) // Set the color to 0xFFCA7867
       .size(55, 55)
-      .padding(const EdgeInsets.all(8))
+      .padding(const EdgeInsets.all(10))
       .rounded
       .make();
 }
