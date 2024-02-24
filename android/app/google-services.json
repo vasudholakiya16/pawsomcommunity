@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "41141333388",
+    "project_id": "community-flutter-project",
+    "storage_bucket": "community-flutter-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41141333388:android:6760c82972624478b4baa9",
+        "android_client_info": {
+          "package_name": "com.example.emart_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlwgc-0oR6134VUPB8NoXmusVl3mh9ewA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41141333388:android:949d11189e0c9c82b4baa9",
+        "android_client_info": {
+          "package_name": "com.example.pawsomcommunity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlwgc-0oR6134VUPB8NoXmusVl3mh9ewA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
