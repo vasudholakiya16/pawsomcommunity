@@ -49,6 +49,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pawsomcommunity/Auth_screen/loginscreen.dart';
+import 'package:pawsomcommunity/consts/colors.dart';
+import 'package:pawsomcommunity/consts/strings.dart';
+import 'package:pawsomcommunity/consts/styles.dart';
+import 'package:pawsomcommunity/controller/authcontroller.dart';
 import 'package:pawsomcommunity/same_code/homeScreen_Image.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -58,72 +63,82 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            children: [
-              (context.screenHeight * 0.20).heightBox,
-              GestureDetector(
-                onTap: () {
-                  print('App logo tapped!');
-                },
-                child: applogoWidget1().paddingOnly(left: 20.0),
-              ),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: GestureDetector(
+        resizeToAvoidBottomInset: false,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              children: [
+                (context.screenHeight * 0.20).heightBox,
+                GestureDetector(
                   onTap: () {
-                    print('Search bar tapped!');
+                    print('App logo tapped!');
                   },
-                  child: search_Bar(),
+                  child: applogoWidget1().paddingOnly(left: 20.0),
                 ),
+                const Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Search bar tapped!');
+                    },
+                    child: search_Bar(),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                // (context.screenHeight * 1.0).heightBox,
+                "Category".text.fontFamily('Mplus').black.size(18).make(),
+              ],
+            ),
+            // search_Bar(),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    print('Dog category clicked');
+                  },
+                  child: categoryScreen('assets/images/dog0.png', 'Dog'),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print('Cat category clicked');
+                  },
+                  child: categoryScreen(
+                      'assets/images/cat_face_main_page.png', 'Cat'),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print('Fish category clicked');
+                  },
+                  child: categoryScreen(
+                      'assets/images/fish_main_page.png', 'Fish'),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    print('Chick category clicked');
+                  },
+                  child: categoryScreen(
+                      'assets/images/chick_main_page.png', 'Chick'),
+                ),
+              ],
+            ), // Add this closing parenthesis
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                side: BorderSide(color: redColor),
               ),
-            ],
-          ),
-          Row(
-            children: [
-              // (context.screenHeight * 1.0).heightBox,
-              "Category".text.fontFamily('Mplus').black.size(18).make(),
-            ],
-          ),
-          // search_Bar(),
-          Row(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  print('Dog category clicked');
-                },
-                child: categoryScreen('assets/images/dog0.png', 'Dog'),
-              ),
-              GestureDetector(
-                onTap: () {
-                  print('Cat category clicked');
-                },
-                child: categoryScreen(
-                    'assets/images/cat_face_main_page.png', 'Cat'),
-              ),
-              GestureDetector(
-                onTap: () {
-                  print('Fish category clicked');
-                },
-                child:
-                    categoryScreen('assets/images/fish_main_page.png', 'Fish'),
-              ),
-              GestureDetector(
-                onTap: () {
-                  print('Chick category clicked');
-                },
-                child: categoryScreen(
-                    'assets/images/chick_main_page.png', 'Chick'),
-              ),
-            ],
-          )
-        ],
-      ),
-    );
+              onPressed: () async {
+                await Get.put(AuthController()).signoutMethod(context);
+                // Get.offAll(() => const LoginScreen());
+                Get.offAll(() => const LoginScreen());
+              },
+              child: logout.text.fontFamily(semibold).black.make(),
+            ),
+          ],
+        ));
   }
 }
 

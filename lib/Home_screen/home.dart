@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pawsomcommunity/Auth_screen/loginscreen.dart';
 import 'package:pawsomcommunity/Auth_screen/signupscreen.dart';
 import 'package:pawsomcommunity/Home_screen/home_screen.dart';
 import 'package:pawsomcommunity/Splesh_screen/skip1.dart';
@@ -66,7 +65,8 @@ class Home extends StatelessWidget {
 
     var navBody = [
       const HomeScreen(),
-      const LoginScreen(),
+      Skip1(),
+      // const LoginScreen(),
       const SignupScreen(),
       const Skip1(),
       const Skip2()

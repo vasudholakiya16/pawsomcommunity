@@ -64,6 +64,4 @@ class AuthController extends GetxController {
       VxToast.show(context, msg: e.toString());
     }
   }
-
-  checkEmailExists() {}
 }

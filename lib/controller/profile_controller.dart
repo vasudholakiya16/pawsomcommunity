@@ -11,7 +11,7 @@ class ProfileController extends GetxController {
 
   // Update profile
   updateProfile({password}) async {
-    var store = firestore.collection(userCollections).doc(currentUser!.uid);
+    var store = firestore.collection(userCollections).doc(currentUser?.uid);
 
     await store.update({
       'password': password,

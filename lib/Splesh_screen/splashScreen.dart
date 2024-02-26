@@ -2,8 +2,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pawsomcommunity/Home_screen/home.dart';
 import 'package:pawsomcommunity/Home_screen/home_screen.dart';
+import 'package:pawsomcommunity/Splesh_screen/skip1.dart';
 import 'package:pawsomcommunity/consts/firebase_constent.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -23,9 +23,9 @@ class _MyWidgetState extends State<SplashScreen> {
       // Get.to(() => Skip1());
       auth.authStateChanges().listen((User? user) {
         if (user == null && mounted) {
-          Get.to(() => const HomeScreen());
+          Get.to(() => const Skip1());
         } else {
-          Get.to(() => const Home());
+          Get.to(() => const HomeScreen());
         }
       });
     });
