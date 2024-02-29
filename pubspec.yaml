@@ -46,6 +46,9 @@ dependencies:
   email_otp:
   get:
   image_picker:
+  geolocator:
+  geocoding:
+
 
 dev_dependencies:
   flutter_test:

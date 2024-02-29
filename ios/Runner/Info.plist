@@ -6,6 +6,10 @@
 <key>CFBundleURLTypes</key>
 <array>
 	<dict>
+	 	<key>NSLocationAlwaysUsageDescription</key>
+    	<string>Needed to access location</string>
+    	<key>NSLocationWhenInUseUsageDescription</key>
+    	<string>Needed to access location</string>
 		<key>CFBundleTypeRole</key>
 		<string>Editor</string>
 		<key>CFBundleURLSchemes</key>
