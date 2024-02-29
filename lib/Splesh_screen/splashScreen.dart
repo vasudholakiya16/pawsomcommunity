@@ -2,7 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pawsomcommunity/Home_screen/home_screen.dart';
+import 'package:pawsomcommunity/Home_screen/home.dart';
 import 'package:pawsomcommunity/Splesh_screen/skip1.dart';
 import 'package:pawsomcommunity/consts/firebase_constent.dart';
 
@@ -25,7 +25,7 @@ class _MyWidgetState extends State<SplashScreen> {
         if (user == null && mounted) {
           Get.to(() => const Skip1());
         } else {
-          Get.to(() => const HomeScreen());
+          Get.to(() => const Home());
         }
       });
     });

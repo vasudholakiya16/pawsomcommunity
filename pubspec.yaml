@@ -48,6 +48,7 @@ dependencies:
   image_picker:
   geolocator:
   geocoding:
+  shared_preferences:
 
 
 dev_dependencies:
